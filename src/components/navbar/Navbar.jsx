@@ -22,22 +22,23 @@ export default function Navbar() {
 
   return (
     <div className="w-100 p-10 lg:p-16 pb-0 pt-10 flex justify-between items-center mb-8">
-      <Link  to="/">
+      <Link to="/">
         <img src={"/images/logo.png"} alt="logo" />
       </Link>
       <div className="gap-10 hidden lg:flex">
         {navArray.map((each, ind) => (
-          <Link  className="hover:underline font-semibold text-lg" to={each.path} key={ind}>
+          <Link
+            className="hover:underline font-semibold text-lg"
+            to={each.path}
+            key={ind}
+          >
             {each.title}
           </Link>
         ))}
       </div>
       <div className="gap-8 items-center hidden lg:flex">
-        <Link  className="hover:underline" to="/login">
-          Login
-        </Link>
         <button className="bg-yellow ring-0 p-1.5 rounded-lg">
-          <Link  to="/contact">Contact Us</Link>
+          <Link to="/contact">Contact Us</Link>
         </button>
       </div>
       <div className="lg:hidden">
@@ -60,14 +61,12 @@ export default function Navbar() {
                 key={ind}
                 className="hover:underline pl-0 w-10"
               >
-                <Link  to={each.path}>{each.title}</Link>
+                <Link to={each.path}>{each.title}</Link>
               </button>
             ))}
-            <Link  to="/login" className="hover:underline">
-              Login
-            </Link>
+
             <button className="bg-yellow-400 ring-0 p-1 rounded-lg w-32">
-              <Link  to="/contact">Contact Us</Link>
+              <Link to="/contact">Contact Us</Link>
             </button>
           </div>
         </Modal>

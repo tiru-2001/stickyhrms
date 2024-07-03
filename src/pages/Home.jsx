@@ -9,8 +9,6 @@ import Welcome from "../components/welcome/Welcome.jsx";
 export default function Home() {
   return (
     <>
-      <Navbar />
-
       <div className="bg-gradient-to-b from-white to-teal-700 h-auto">
         <div className="flex flex-col items-center text-center gap-4">
           <h1 className="text-2xl font-bold">
