@@ -1,7 +1,14 @@
 import React from "react";
 import arrow from "../../assets/images/arrow.png";
+import { useNavigate } from "react-router-dom";
 
 const Productcard = ({ data }) => {
+  console.log(data);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/contact");
+  };
   return (
     <div className="w-[99%]">
       <div className="mb-8">
@@ -21,7 +28,10 @@ const Productcard = ({ data }) => {
               <p className="text-base md:text-xl text-black font-lato text-center font-medium mb-4 w-full md:ml-8">
                 {data.description}
               </p>
-              <button className="flex items-center ml-3 md:ml-40 justify-center rounded-full py-2 px-4 md:px-8 bg-yellow text-black font-bold font-roboto text-lg md:text-md mb-4 md:mb-10 mt-2 md:mt-0 md:w-[50%] h-12 md:h-14">
+              <button
+                onClick={handleClick}
+                className="flex items-center ml-3 md:ml-40 justify-center rounded-full py-2 px-4 md:px-8 bg-yellow text-black font-bold font-roboto text-lg md:text-md mb-4 md:mb-10 mt-2 md:mt-0 md:w-[50%] h-12 md:h-14"
+              >
                 <span className="flex items-center md:w-[80%]">
                   {data.buttonText}
                   <img

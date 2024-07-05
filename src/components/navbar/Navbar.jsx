@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-
+import logo from "../../assets/images/Group57.png";
 import { Link } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import Modal from "react-modal";
-import { RxCross2 } from "react-icons/rx";
 
 const navArray = [
   { path: "/", title: "Home" },
   { path: "/products", title: "Products" },
   { path: "/resources", title: "Resources" },
-  { path: "/pricing", title: "Pricing" },
+  { path: "/price", title: "Pricing" },
   { path: "/about", title: "About" },
 ];
+
+Modal.setAppElement("#root"); // Set the root element for accessibility
 
 export default function Navbar() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -21,11 +22,11 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-100 p-10 lg:p-16 pb-0 pt-10 flex justify-between items-center mb-8">
+    <div className="w-full  top-0 p-4 lg:p-8 flex justify-between items-center bg-white shadow-md z-50">
       <Link to="/">
-        <img src={"/images/logo.png"} alt="logo" />
+        <img className="w-40 lg:w-[200px]" src={logo} alt="logo" />
       </Link>
-      <div className="gap-10 hidden lg:flex">
+      <div className="hidden lg:flex gap-10">
         {navArray.map((each, ind) => (
           <Link
             className="hover:underline font-semibold text-lg"
@@ -36,36 +37,40 @@ export default function Navbar() {
           </Link>
         ))}
       </div>
-      <div className="gap-8 items-center hidden lg:flex">
-        <button className="bg-yellow ring-0 p-1.5 rounded-lg">
+      <div className="hidden lg:flex gap-8 items-center">
+        <button className="bg-yellow text-black py-2 px-4 rounded-lg">
           <Link to="/contact">Contact Us</Link>
         </button>
       </div>
       <div className="lg:hidden">
-        <button className="" onClick={closeModal}>
-          <RxHamburgerMenu />
+        <button onClick={closeModal}>
+          <RxHamburgerMenu size={24} />
         </button>
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
-          contentLabel="Example Modal"
-          className="h-2/5 bg-[#90b3b3] relative top-10 w-64 left-24 p-10 rounded-lg"
+          contentLabel="Menu"
+          className={`fixed top-0 right-0 h-full w-64 bg-[#90b3b3] p-8 transition-transform transform ${
+            modalIsOpen ? "translate-x-0" : "translate-x-full"
+          } z-50`}
+          overlayClassName="fixed inset-0 bg-black bg-opacity-50 z-40"
+          closeTimeoutMS={300}
         >
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col justify-center items-center gap-6">
             <button className="self-end" onClick={closeModal}>
               <RxCross2 className="text-2xl" />
             </button>
             {navArray.map((each, ind) => (
-              <button
-                onClick={closeModal}
+              <Link
+                to={each.path}
                 key={ind}
-                className="hover:underline pl-0 w-10"
+                className="hover:underline text-lg"
+                onClick={closeModal}
               >
-                <Link to={each.path}>{each.title}</Link>
-              </button>
+                {each.title}
+              </Link>
             ))}
-
-            <button className="bg-yellow-400 ring-0 p-1 rounded-lg w-32">
+            <button className="bg-yellow text-black py-2 px-4 rounded-lg">
               <Link to="/contact">Contact Us</Link>
             </button>
           </div>

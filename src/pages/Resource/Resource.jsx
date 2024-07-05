@@ -87,7 +87,7 @@ const Resource = () => {
   return (
     <div>
       {/* Original container */}
-      <div className="bg-blue-400 p-4 md:p-10 shadow-lg text-center mb-8 mt-10 flex flex-col md:flex-row min-w-screen">
+      <div className="bg-blue p-4 md:p-10 shadow-lg text-center mb-8 mt-10 flex flex-col md:flex-row min-w-screen">
         <div className="md:w-2/5 p-2 md:ml-40">
           <h3 className="font-roboto text-3xl font-semibold text-left mb-2">
             Blogs and Case Studies

@@ -1,61 +1,68 @@
 import React, { useState } from "react";
+import icon1 from "../../assets/images/icon1.png";
+import icon2 from "../../assets/images/icon2.png";
+import icon3 from "../../assets/images/icon3.png";
+import icon4 from "../../assets/images/icon4.png";
+import icon5 from "../../assets/images/icon5.png";
+import icon6 from "../../assets/images/icon6.png";
+import arrow from "../../assets/images/arrow.png";
 
 const array1 = [
   {
     title: "Comprehensive HR Solutions",
     content:
       "Our HRMS offers a complete suite of tools to manage every aspect of HR, from recruitment and onboarding to performance management and employee engagement. With StickyHR, you have all the resourcesyou need in one place.",
-    url: "/images/icon1.png",
+    url: icon1,
   },
   {
     title: "User Friendly Interface",
     content:
       "We understand the importance of a seamless user experience. Our intuitive  interface ensures that both HR professionals and employees can navigate the  system with ease, reducing the learning curve and increasing productivity. ",
-    url: "/images/icon2.png",
+    url: icon2,
   },
   {
     title: "Customizable and Scalable",
     content:
       "Your business is unique, and so are your HR needs. StickyHR is fully  customizable to fit your specific requirements. As your business grows, our  system scales with you, ensuring continuous support and functionality. ",
-    url: "/images/icon3.png",
+    url: icon3,
   },
   {
     title: "Data-Driven Insights",
     content:
       "Make informed decisions with real-time data and analytics. Our HRMS provides  detailed reports and insights into your workforce, helping you identify trends,  measure performance, and improve overall efficiency.",
-    url: "/images/icon4.png",
+    url: icon4,
   },
   {
     title: "Secure and Compliant",
     content:
       "We prioritize the security of your data. StickyHR is built with robust security  measures and complies with all relevant regulations to ensure your information  is protected at all times. ",
-    url: "/images/icon5.png",
+    url: icon5,
   },
   {
     title: "Seamless Integration",
     content:
       "Integrate our HRMS with your existing tools and systems effortlessly. Whether  it's payroll, time tracking, or third-party applications, our system ensures  smooth and seamless integration",
-    url: "/images/icon6.png",
+    url: icon6,
   },
 ];
 
 export default function Welcome() {
   const [index, setIndex] = useState(0);
   return (
-    <div className="mt-40 w-[80%] ml-40 mb-40">
-      <h1 className="text-center font-bold text-2xl m-3">
+    <div className="flex flex-col justify-center items-center lg:ml-28 lg:mr-28 lg:mt-[76px] ">
+      <h1 className="text-center font-bold text-2xl mt-3  lg:text-[27px]">
         {" "}
         Welcome to Sticky HR: Transforming HR Management
       </h1>
-      <p className="text-center text-md m-3 w-[60%] ml-80">
+      <p className="text-center text-md mt-2 leading-6 p-2  lg:text-[20px] lg:font-medium lg:leading-8  lg:mt-[24px]">
         In today's fast-paced business environment, managing human resources
         efficiently and effectively is crucial for success. Welcome to StickyHR
         HRMS, the ultimate solution for streamlining your HR processes and
         empowering your workforce. Our comprehensive Human Resource Management
-        System HRMS is designed to cater to the unique needs of businesses of
+        System HRMS is designed to cater to the unique needs of businesses of
         all sizes, from small startups to large enterprises
       </p>
-      <div className="flex gap-10 flex-col items-center p-10 lg:flex-row lg:items-stretch">
+      <div className="flex gap-10 flex-col items-center p-10 lg:flex-row lg:items-stretch lg:mt-[46px]">
         <div className="flex flex-col gap-5">
           <button
             onClick={() => setIndex(0)}
@@ -168,30 +175,30 @@ export default function Welcome() {
               <path
                 d="M3.75 9.58203C3.75 8.91899 4.01339 8.2831 4.48223 7.81426C4.95107 7.34542 5.58696 7.08203 6.25 7.08203H13.515C14.2098 7.08201 14.8871 7.29906 15.4525 7.70286L19.5475 10.6279C20.1129 11.0317 20.7902 11.2487 21.485 11.2487H33.75C34.413 11.2487 35.0489 11.5121 35.5178 11.9809C35.9866 12.4498 36.25 13.0857 36.25 13.7487V30.4154C36.25 31.0784 35.9866 31.7143 35.5178 32.1831C35.0489 32.652 34.413 32.9154 33.75 32.9154H6.25C5.58696 32.9154 4.95107 32.652 4.48223 32.1831C4.01339 31.7143 3.75 31.0784 3.75 30.4154V9.58203Z"
                 stroke="#FFC600"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M20 27.9167C23.2217 27.9167 25.8334 25.305 25.8334 22.0833C25.8334 18.8617 23.2217 16.25 20 16.25C16.7784 16.25 14.1667 18.8617 14.1667 22.0833C14.1667 25.305 16.7784 27.9167 20 27.9167Z"
                 stroke="#FFC600"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M20 23.2135C21.1506 23.2135 22.0834 22.2808 22.0834 21.1302C22.0834 19.9796 21.1506 19.0469 20 19.0469C18.8494 19.0469 17.9167 19.9796 17.9167 21.1302C17.9167 22.2808 18.8494 23.2135 20 23.2135Z"
                 stroke="#FFC600"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M20 23.2109V25.1209"
                 stroke="#FFC600"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             <h1>Secure and compliant</h1>
@@ -211,10 +218,10 @@ export default function Welcome() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_383_59)">
+              <g clipPath="url(#clip0_383_59)">
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M16.9833 9.67677C17.1363 9.39367 17.3637 9.15772 17.641 8.99441C17.9182 8.8311 18.2349 8.74663 18.5566 8.7501L22.0566 8.80344C22.3775 8.81047 22.6904 8.9048 22.9618 9.07629C23.2331 9.24777 23.4526 9.48994 23.5966 9.77677L24.9966 12.5901L27.47 12.3801C27.7867 12.355 28.1043 12.4157 28.3894 12.5559C28.6745 12.6961 28.9165 12.9106 29.09 13.1768L30.8566 15.9168C31.0464 16.2118 31.1431 16.5571 31.1342 16.9078C31.1252 17.2585 31.0111 17.5984 30.8066 17.8834L29.5066 19.7034L30.89 21.5301C31.32 22.0968 31.3633 22.8701 30.9966 23.4834L29.33 26.2768C29.1643 26.5507 28.9273 26.7745 28.6443 26.9242C28.3613 27.074 28.043 27.144 27.7233 27.1268L25.1066 26.9668L23.4966 30.2634C23.3509 30.5565 23.1266 30.8033 22.8488 30.9763C22.571 31.1494 22.2506 31.2419 21.9233 31.2434H18.3166C17.9899 31.2412 17.6702 31.1485 17.393 30.9755C17.1159 30.8025 16.8921 30.556 16.7466 30.2634L15.2333 27.1668L12.4333 27.4201C12.1105 27.4472 11.7865 27.385 11.4967 27.2404C11.2069 27.0958 10.9624 26.8743 10.79 26.6001L9.01997 23.7501C8.83224 23.4476 8.74124 23.095 8.7591 22.7395C8.77697 22.3839 8.90286 22.0423 9.11997 21.7601L10.72 19.6768L9.4333 17.8801C9.22931 17.5947 9.11579 17.2546 9.10747 16.9039C9.09915 16.5533 9.19641 16.2082 9.38664 15.9134L11.1533 13.1734C11.3265 12.9078 11.5679 12.6936 11.8524 12.5534C12.1369 12.4133 12.4538 12.3522 12.77 12.3768L15.4266 12.6034L16.9833 9.67677ZM18.9766 11.2568L17.4033 14.2168C17.2409 14.5182 16.9944 14.766 16.6938 14.9299C16.3931 15.0938 16.0513 15.1669 15.71 15.1401L13.01 14.9101L11.7633 16.8434L13.0766 18.6768C13.2951 18.9817 13.4098 19.3488 13.4038 19.7239C13.3978 20.099 13.2714 20.4623 13.0433 20.7601L11.4166 22.8734L12.67 24.8934L15.5233 24.6334C15.8769 24.6007 16.232 24.6762 16.5416 24.8501C16.8512 25.0239 17.1006 25.2878 17.2566 25.6068L18.7866 28.7434H21.4533L23.08 25.4201C23.2336 25.1115 23.4743 24.8545 23.7722 24.681C24.0701 24.5074 24.4123 24.4249 24.7566 24.4434L27.4166 24.6034L28.59 22.6368L27.1766 20.7701C26.9518 20.4725 26.828 20.1108 26.8232 19.7378C26.8184 19.3648 26.9329 19.0001 27.15 18.6968L28.48 16.8434L27.2333 14.9101L24.7 15.1234C24.3499 15.1533 23.9989 15.077 23.6927 14.9046C23.3865 14.7322 23.1393 14.4716 22.9833 14.1568L21.56 11.2968L18.9766 11.2568Z"
                   fill="#FFC600"
                 />
@@ -223,8 +230,8 @@ export default function Welcome() {
                   fill="#FFC600"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M20 18.75C19.6685 18.75 19.3505 18.8817 19.1161 19.1161C18.8817 19.3505 18.75 19.6685 18.75 20C18.75 20.3315 18.8817 20.6495 19.1161 20.8839C19.3505 21.1183 19.6685 21.25 20 21.25C20.3315 21.25 20.6495 21.1183 20.8839 20.8839C21.1183 20.6495 21.25 20.3315 21.25 20C21.25 19.6685 21.1183 19.3505 20.8839 19.1161C20.6495 18.8817 20.3315 18.75 20 18.75ZM16.25 20C16.25 19.0054 16.6451 18.0516 17.3483 17.3483C18.0516 16.6451 19.0054 16.25 20 16.25C20.9946 16.25 21.9484 16.6451 22.6516 17.3483C23.3549 18.0516 23.75 19.0054 23.75 20C23.75 20.9946 23.3549 21.9484 22.6516 22.6516C21.9484 23.3549 20.9946 23.75 20 23.75C19.0054 23.75 18.0516 23.3549 17.3483 22.6516C16.6451 21.9484 16.25 20.9946 16.25 20Z"
                   fill="#FFC600"
                 />
@@ -238,18 +245,15 @@ export default function Welcome() {
             <h1>seamless Integration</h1>
           </button>
         </div>
-        <div className="bg-[#90b3b3] p-10 flex gap-10 items-center rounded-md">
-          <div className="space-y-3 w-1/2">
+        <div className="bg-[#90b3b3] p-10 flex flex-col-reverse lg:flex-row gap-10 items-center justify-center rounded-md">
+          <div className="space-y-3 w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
             <h1 className="font-bold text-xl">{array1[index].title}</h1>
             <p className="text-md break-all">{array1[index].content}</p>
-            <button className="bg-yellow p-3 rounded-3xl flex gap-2 w-60 pl-10 hover:scale-105 duration-300">
-              Schedule A Demo <img src={"/images/arrow.png"} alt="arrow" />
-            </button>
           </div>
           <img
             src={array1[index].url}
             alt="url"
-            className="w-1/3 h-36 lg:w-2/5 md:h-auto"
+            className="w-full lg:w-2/5 h-36 lg:h-auto object-contain"
           />
         </div>
       </div>

@@ -1,7 +1,13 @@
 import React from "react";
 import image from "../../assets/images/resouce1[1].png";
+import { useNavigate } from "react-router-dom";
 
 const Pricing = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/contact");
+  };
   const description =
     "Explore our flexible pricing plans designed to meet the diverse needs of businesses of all sizes, ensuring you get the best value for your investment.";
 
@@ -162,7 +168,10 @@ const Pricing = () => {
                 {feature}
               </p>
             ))}
-            <button className="self-center mt-10 mb-10 w-3/4 h-14 text-xl bg-yellow text-black font-roboto font-semibold rounded">
+            <button
+              onClick={handleClick}
+              className="self-center mt-10 mb-10 w-3/4 h-14 text-xl bg-yellow text-black font-roboto font-semibold rounded"
+            >
               Contact Us
             </button>
           </div>
