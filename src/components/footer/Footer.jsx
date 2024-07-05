@@ -8,8 +8,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaPhone, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import emailjs from "emailjs-com";
 import logo from "../../assets/images/Group57.png";
 
@@ -88,12 +86,12 @@ const Footer = () => {
       .then(
         (result) => {
           console.log(result.text);
-          toast.success("Demo scheduled successfully!");
+          alert("Demo scheduled successfully!");
           setFormData(initialFormData);
         },
         (error) => {
           console.log(error.text);
-          toast.error("Failed to schedule demo. Please try again.");
+          alert("Failed to schedule demo. Please try again.");
         }
       );
   };
@@ -187,7 +185,6 @@ const Footer = () => {
                 </div>
               </div>
             </form>
-            <ToastContainer />
           </div>
         </div>
       </div>
