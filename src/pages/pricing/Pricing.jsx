@@ -105,8 +105,16 @@ const Pricing = () => {
           <h3 className="font-roboto text-3xl font-semibold text-left mb-2">
             Pricing
           </h3>
-          <p className="text-gray-800 font-lato font-normal text-left leading-8 text-xl">
-            {description}
+          <p className="text-gray-800  font-bold text-left leading-8 text-xl">
+            Hi there, Thank you for your interest in StickyHR! We’d love to
+            discuss pricing options tailored to your organization’s needs. Let’s
+            connect and explore how StickyHR can enhance your workflow
+            efficiency. Please reply to this email, and we’ll schedule a call at
+            your convenience. Looking forward to chatting with you!
+            <br />
+            Best regards,
+            <br />
+            StickyHR Team
           </p>
         </div>
         <div className="md:w-3/5 flex justify-center items-center">
@@ -118,7 +126,7 @@ const Pricing = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap lg:flex-nowrap gap-16 p-4 md:p-10 lg:p-36">
+      {/* <div className="flex flex-wrap lg:flex-nowrap gap-16 p-4 md:p-10 lg:p-36">
         {plans.map((plan, index) => (
           <div
             key={index}
@@ -176,7 +184,7 @@ const Pricing = () => {
             </button>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

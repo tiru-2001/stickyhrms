@@ -87,7 +87,7 @@ const Resource = () => {
   return (
     <div>
       {/* Original container */}
-      <div className="bg-blue p-4 md:p-10 shadow-lg text-center mb-8 mt-10 flex flex-col md:flex-row min-w-screen">
+      <div className=" bg-[#79c0c0] p-4 md:p-10 shadow-lg text-center mb-8 mt-10 flex flex-col md:flex-row min-w-screen">
         <div className="md:w-2/5 p-2 md:ml-40">
           <h3 className="font-roboto text-3xl font-semibold text-left mb-2">
             Blogs and Case Studies
@@ -139,7 +139,7 @@ const Resource = () => {
       </div>
 
       {/* Additional containers */}
-      <div className="bg-white p-4 md:p-10 lg:p-20 text-center">
+      {/* <div className="bg-white p-4 md:p-10 lg:p-20 text-center">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-4 md:px-10 lg:px-16">
           {additionalResources.map((resource, index) => (
             <div
@@ -169,7 +169,7 @@ const Resource = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

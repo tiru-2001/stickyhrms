@@ -68,7 +68,7 @@ export default function Welcome() {
             onClick={() => setIndex(0)}
             className={
               index === 0
-                ? "flex items-center w-96 gap-2 p-3 rounded-md hover:scale-105 duration-300 bg-[#90b3b3]"
+                ? "flex items-center w-96 gap-2 p-3 rounded-md hover:scale-105 duration-300 bg-[#73c3b8] "
                 : "flex items-center w-96 gap-2 bg-teal-600 p-3 rounded-md hover:scale-105 duration-300"
             }
           >
@@ -84,13 +84,13 @@ export default function Welcome() {
                 fill="#FFC600"
               />
             </svg>
-            <h1>Comprehensive HR Solutions</h1>
+            <h1 className="font-bold">Comprehensive HR Solutions</h1>
           </button>
           <button
             onClick={() => setIndex(1)}
             className={
               index === 1
-                ? "flex items-center w-96 gap-2 p-3 rounded-md hover:scale-105 duration-300 bg-[#90b3b3]"
+                ? "flex items-center w-96 gap-2 p-3 rounded-md hover:scale-105 duration-300 bg-[#73c3b8] "
                 : "flex items-center w-96 gap-2 bg-teal-600 p-3 rounded-md hover:scale-105 duration-300"
             }
           >
@@ -110,13 +110,13 @@ export default function Welcome() {
                 stroke="#FFC600"
               />
             </svg>
-            <h1>User-Friendly Interface</h1>
+            <h1 className="font-bold">User-Friendly Interface</h1>
           </button>
           <button
             onClick={() => setIndex(2)}
             className={
               index === 2
-                ? "flex items-center w-96 gap-2 p-3 rounded-md hover:scale-105 duration-300 bg-[#90b3b3]"
+                ? "flex items-center w-96 gap-2 p-3 rounded-md hover:scale-105 duration-300 bg-[#73c3b8] "
                 : "flex items-center w-96 gap-2 bg-teal-600 p-3 rounded-md hover:scale-105 duration-300"
             }
           >
@@ -132,13 +132,13 @@ export default function Welcome() {
                 fill="#FFC600"
               />
             </svg>
-            <h1>customizing and scalable</h1>
+            <h1 className="font-bold">customizing and scalable</h1>
           </button>
           <button
             onClick={() => setIndex(3)}
             className={
               index === 3
-                ? "flex items-center w-96 gap-2 p-3 rounded-md hover:scale-105 duration-300 bg-[#90b3b3]"
+                ? "flex items-center w-96 gap-2 p-3 rounded-md hover:scale-105 duration-300 bg-[#73c3b8] "
                 : "flex items-center w-96 gap-2 bg-teal-600 p-3 rounded-md hover:scale-105 duration-300"
             }
           >
@@ -155,13 +155,13 @@ export default function Welcome() {
                 stroke="#FFC600"
               />
             </svg>
-            <h1>Date-Driven Insights</h1>
+            <h1 className="font-bold">Date-Driven Insights</h1>
           </button>
           <button
             onClick={() => setIndex(4)}
             className={
               index === 4
-                ? "flex items-center w-96 gap-2 p-3 rounded-md hover:scale-105 duration-300 bg-[#90b3b3]"
+                ? "flex items-center w-96 gap-2 p-3 rounded-md hover:scale-105 duration-300 bg-[#73c3b8] "
                 : "flex items-center w-96 gap-2 bg-teal-600 p-3 rounded-md hover:scale-105 duration-300"
             }
           >
@@ -201,13 +201,13 @@ export default function Welcome() {
                 strokeLinejoin="round"
               />
             </svg>
-            <h1>Secure and compliant</h1>
+            <h1 className="font-bold">Secure and compliant</h1>
           </button>
           <button
             onClick={() => setIndex(5)}
             className={
               index === 5
-                ? "flex items-center w-96 gap-2 p-3 rounded-md hover:scale-105 duration-300 bg-[#90b3b3]"
+                ? "flex items-center w-96 gap-2 p-3 rounded-md hover:scale-105 duration-300 bg-[#73c3b8] "
                 : "flex items-center w-96 gap-2 bg-teal-600 p-3 rounded-md hover:scale-105 duration-300"
             }
           >
@@ -242,13 +242,15 @@ export default function Welcome() {
                 </clipPath>
               </defs>
             </svg>
-            <h1>seamless Integration</h1>
+            <h1 className="font-bold">seamless Integration</h1>
           </button>
         </div>
-        <div className="bg-[#90b3b3] p-10 flex flex-col-reverse lg:flex-row gap-10 items-center justify-center rounded-md">
+        <div className="bg-[#73c3b8] p-10 flex flex-col-reverse lg:flex-row gap-10 items-center justify-center rounded-md">
           <div className="space-y-3 w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <h1 className="font-bold text-xl">{array1[index].title}</h1>
-            <p className="text-md break-all">{array1[index].content}</p>
+            <h1 className="font-bold bg-yellow rounded px-2 py-1 text-xl">
+              {array1[index].title}
+            </h1>
+            <p className="text-md font-bold">{array1[index].content}</p>
           </div>
           <img
             src={array1[index].url}

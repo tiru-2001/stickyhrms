@@ -62,7 +62,7 @@ const Box = ({ data }) => {
         <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">
           {data.title}
         </h3>
-        <p className="text-sm font-normal sm:text-base md:text-lg text-center justify-center text-black">
+        <p className="text-sm font-normal sm:text-base md:text-md text-center justify-center text-black">
           {data.description}
         </p>
       </div>

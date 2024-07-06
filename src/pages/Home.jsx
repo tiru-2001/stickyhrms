@@ -19,12 +19,12 @@ export default function Home() {
   };
   return (
     <div className="min-w-screen overflow-x-hidden">
-      <div className="bg-gradient-to-b from-white to-teal-700 h-auto">
+      <div className="bg-gradient-to-b from-white  to-darkTeal h-auto">
         <div className="flex flex-col items-center text-center gap-4 mt-8 px-4">
-          <h1 className="text-2xl font-bold">
+          <h1 className="text-3xl font-bold">
             Experience the Future of HR Management
           </h1>
-          <p className="text-lg w-full sm:w-5/6">
+          <p className="text-lg font-bold w-full sm:w-5/6">
             We are committed to helping you transform your HR processes and
             create a better workplace for your employees. Our HRMS is designed
             to save you time, reduce costs, and enhance the overall employee
@@ -32,7 +32,7 @@ export default function Home() {
           </p>
           <button
             onClick={handleClick}
-            className="bg-yellow p-4 rounded-3xl flex hover:scale-105 duration-300 gap-2"
+            className="bg-yellow font-bold p-4 rounded-3xl flex hover:scale-105 duration-300 gap-2"
           >
             Schedule A Demo <img src={image} alt="arrow" />
           </button>

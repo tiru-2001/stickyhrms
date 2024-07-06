@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/images/Group57.png";
+import Logoo from "../../assets//images/Logoo.png";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import Modal from "react-modal";
@@ -23,13 +24,13 @@ export default function Navbar() {
 
   return (
     <div className="w-full  top-0 p-4 lg:p-8 flex justify-between items-center bg-white shadow-md z-50">
-      <Link to="/">
-        <img className="w-40 lg:w-[200px]" src={logo} alt="logo" />
+      <Link className="flex gap-3" to="/">
+        <img className="w-30 lg:w-[140px]" src={Logoo} alt="logoo" />
       </Link>
       <div className="hidden lg:flex gap-10">
         {navArray.map((each, ind) => (
           <Link
-            className="hover:underline font-semibold text-lg"
+            className="hover:underline font-bold text-lg"
             to={each.path}
             key={ind}
           >
@@ -38,7 +39,7 @@ export default function Navbar() {
         ))}
       </div>
       <div className="hidden lg:flex gap-8 items-center">
-        <button className="bg-yellow text-black py-2 px-4 rounded-lg">
+        <button className="bg-yellow font-bold text-black py-2 px-4 rounded-lg">
           <Link to="/contact">Contact Us</Link>
         </button>
       </div>

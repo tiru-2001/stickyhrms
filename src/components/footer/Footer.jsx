@@ -15,8 +15,8 @@ import logo from "../../assets/images/Group57.png";
 
 const columns = [
   {
-    title: "Resources Blog",
-    items: ["Blog", "Case Studies", "HR Webinar", "HR Tank", "HR Innovation"],
+    title: "Resources",
+    items: ["Blog", "Case Studies", "HR Webinar"],
     marginLeft: "md:ml-40",
     path: "/resources",
   },
@@ -101,17 +101,17 @@ const Footer = () => {
   return (
     <div className="bg-customGreen w-full text-center">
       {/* InfoContainer */}
-      <div className="bg-white p-10 w-full text-center">
+      <div className="bg-white  py-10 w-full text-center">
         <div className="flex flex-col md:flex-row justify-between items-start md:ml-8 mt-4 mb-10">
           <div className="w-full md:w-1/2 text-black p-5">
-            <h3 className="text-3xl font-semibold font-roboto max-w-[400px] md:max-w-[600px] align-left text-left lg:ml-20 lg:mt-5">
+            <h3 className="text-3xl font-semibold  max-w-[400px] md:max-w-[600px] align-left text-left lg:ml-20 lg:mt-5">
               Join Us on Our Journey
             </h3>
-            <p className="text-xl text-black max-w-[350px] md:max-w-[600px] font-lato align-baseline mt-6 md:ml-20 text-left leading-relaxed">
-              Whether you are a small startup or a large enterprise, Sticky HR
-              has the solutions to help you manage your workforce more
-              effectively. Join us on our journey to transform HR management and
-              create a brighter future for your organization.
+            <p className="text-xl  font-medium text-black max-w-[350px] md:max-w-[600px]  align-baseline mt-6 md:ml-20 text-left leading-relaxed">
+              "Join Us on Our Journey: Elevating HR Management through
+              Innovative, AI-Driven Solutions. Together, let's simplify
+              processes, enhance productivity, and shape the future of work.
+              Experience the transformative power of Sticky HR today."
             </p>
           </div>
           <div className="bg-customGreen text-black p-10 rounded-3xl w-full md:w-2/4 md:mr-20 mt-10 md:mt-0">
@@ -192,14 +192,10 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:ml-8">
-        <div className="w-full lg:w-1/2 text-white p-10">
-          <img
-            src={logo}
-            alt="Logo"
-            className="h-14 max-w-[520px] mb-4 ml-7  mt-1"
-          />
-          <p className="text-xl text-gray-200 max-w-[690px] font-lato mt-8 ml-10 mb-0 text-left leading-relaxed">
+      <div className="flex  flex-col lg:flex-row justify-between items-center ">
+        <div className="w-full  text-white flex flex-col items-center p-10">
+          <img src={logo} alt="Logo" className="h-14  max-w-[520px]" />
+          <p className="text-xl  text-gray-200 w-[90%] mt-8 ml-10 mb-0 text-center leading-relaxed">
             We are committed to helping you transform your HR processes and
             create a better workplace for your employees. Our HRMS is designed
             to save you time, reduce costs, and enhance the overall employee
@@ -212,17 +208,17 @@ const Footer = () => {
         <div className="h-px bg-customGray my-4 mx-4"></div>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:mt-10">
           <div className="flex flex-col justify text-lg">
-            <p className="lg:font-roboto lg:text-lg lg:ml-20 lg:font-medium text-start ml-20">
+            <p className="bg-yellow  text-black rounded w-max px-2 py-1 font-bold  lg:text-lg lg:ml-20 text-start ml-20">
               <FaPhone className="inline-block mr-4" />
               Contact Us{" "}
             </p>
             <p className="font-lato font-extralight lg:ml-20 text-lg mt-2 text-start ml-20">
-              +91852741963
+              +919033244538
             </p>
           </div>
           <div className="flex flex-col justify">
-            <p className="font-roboto ml-20 text-left text-lg font-medium">
-              Reach Us <FaMapMarkerAlt className="inline-block ml-2" />
+            <p className=" bg-yellow text-black rounded w-max px-2 py-1 font-bold ml-20 text-left text-lg ">
+              <FaMapMarkerAlt className="inline-block ml-2" /> Reach Us
             </p>
             <p className="font-lato font-extralight text-lg mt-2 leading-8 text-left ml-20">
               Garuda Bhive Workspace,kuvempu bus station,Bengalore
@@ -230,7 +226,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex flex-col justify">
-            <p className="font-roboto lg:ml-40 text-lg text-left font-medium ml-20">
+            <p className=" lg:ml-40 text-black bg-yellow rounded w-max px-2 py-1 font-bold text-lg text-left  ml-20">
               {" "}
               <FaEnvelope className="inline-block mr-4" />
               Mail Us
@@ -245,10 +241,7 @@ const Footer = () => {
               icon={faYoutube}
               className="text-white text-3xl mx-4"
             />
-            <FontAwesomeIcon
-              icon={faFacebook}
-              className="text-white text-3xl mx-4"
-            />
+
             <FontAwesomeIcon
               icon={faInstagram}
               className="text-white text-3xl mx-4"
@@ -272,13 +265,13 @@ const Footer = () => {
             <div key={index} className="p-4">
               {column.title && (
                 <h4
-                  className={`text-xl font-normal font-roboto text-left text-white ${column.marginLeft}`}
+                  className={`text-xl bg-yellow text-black  px-2 py-1  text-left w-max font-bold  rounded ${column.marginLeft}`}
                 >
                   {column.title}
                 </h4>
               )}
               <ul
-                className={`list-inside text-gray-200 font-lato text-xl font-extrathin text-left leading-relaxed ${column.marginLeft}`}
+                className={`list-inside mt-2 text-gray-200 font-lato text-xl font-extrathin text-left leading-relaxed ${column.marginLeft}`}
               >
                 {column.items.map((item, idx) => (
                   <li key={idx}>{item}</li>

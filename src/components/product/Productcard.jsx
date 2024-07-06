@@ -22,17 +22,15 @@ const Productcard = ({ data }) => {
                   alt="Product"
                 />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-center md:ml-10 mt-2 text-black">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-center md:ml-10  text-black">
                 {data.title}
               </h2>
-              <p className="text-base md:text-xl text-black font-lato text-center font-medium mb-4 w-full md:ml-8">
-                {data.description}
-              </p>
+
               <button
                 onClick={handleClick}
-                className="flex items-center ml-3 md:ml-40 justify-center rounded-full py-2 px-4 md:px-8 bg-yellow text-black font-bold font-roboto text-lg md:text-md mb-4 md:mb-10 mt-2 md:mt-0 md:w-[50%] h-12 md:h-14"
+                className="flex items-center ml-3 md:ml-40 justify-center rounded-full py-2 px-4 md:px-8 bg-yellow text-black font-bold font-roboto text-lg md:text-md mb-4 md:mb-10 mt-2 md:mt-0 md:w-max h-12 md:h-14"
               >
-                <span className="flex items-center md:w-[80%]">
+                <span className="flex items-center  md:w-full">
                   {data.buttonText}
                   <img
                     src={arrow}
