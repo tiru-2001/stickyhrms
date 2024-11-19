@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faYoutube,
-  faFacebook,
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
@@ -10,8 +9,9 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaPhone, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import emailjs from "emailjs-com";
+
 import logo from "../../assets/images/Group57.png";
+import { sendEmail } from "../../utilities";
 
 const columns = [
   {
@@ -54,9 +54,9 @@ const Footer = () => {
     phone: "",
     company: "",
   };
-
   const [formData, setFormData] = useState(initialFormData);
   const [isTyping, setIsTyping] = useState(false); // State to track input focus
+  const [loading, setLoading] = useState(false);
   const form = useRef();
 
   const handleChange = (e) => {
@@ -75,27 +75,31 @@ const Footer = () => {
     setIsTyping(false);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_8csfy9e",
-        "template_02dvmih",
-        form.current,
-        "SUDClEa8dJErqojnl"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          toast.success("Demo scheduled successfully!");
-          setFormData(initialFormData);
-        },
-        (error) => {
-          console.log(error.text);
-          toast.error("Failed to schedule demo. Please try again.");
-        }
-      );
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      setLoading(true);
+      const response = await sendEmail({
+        ...formData,
+        message: `You got a message from  the ${formData.company} and the name is  ${formData.name} and the phone number is  ${formData.phone}`,
+      });
+      console.log(response);
+      if (response) {
+        toast.success("Form submitted successfully");
+        setLoading(false);
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          company: "",
+        });
+      }
+    } catch (e) {
+      console.log(e);
+      toast.error("Something went wrong");
+      setLoading(false);
+      console.error(e);
+    }
   };
 
   return (
@@ -115,7 +119,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="bg-customGreen text-black p-10 rounded-3xl w-full md:w-2/4 md:mr-20 mt-10 md:mt-0">
-            <form onSubmit={handleSubmit} ref={form}>
+            <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
                 <div>
                   <input
@@ -182,7 +186,7 @@ const Footer = () => {
                     type="submit"
                     className="bg-yellow p-4 rounded-lg border border-black w-full md:w-2/4 text-black font-lato font-semibold"
                   >
-                    Submit
+                    {loading ? "loading" : "Submit"}
                   </button>
                 </div>
               </div>
